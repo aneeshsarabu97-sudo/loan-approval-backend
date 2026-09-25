@@ -30,7 +30,7 @@ const loanSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    emplymentstatus:{
+    employmentstatus:{
         type:String,
         required:true
     },
@@ -51,6 +51,4 @@ const loanSchema = new mongoose.Schema({
 },{timestamps:true}
 )
 
-export const loan = mongoose.model("loan",loanSchema
-
-)
+export const Loan = mongoose.model("Loan",loanSchema)

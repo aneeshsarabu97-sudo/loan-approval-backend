@@ -64,17 +64,6 @@ const loancreation = await Loan.create({
     );
 })
 
-const getMyLoans = asyncHandler(async(req,res)=>{
-    const loans = await Loan.find({
-        user:req.user._id
-    })
-
-    return res.status(201)
-    .json(
-        new ApiResponse(201,loans,"Loans fetched sucuessfully")
-    )
-
-})
 
 const getLoanById = asyncHandler(async(req,res)=>{
     const {loan_id} = req.params
